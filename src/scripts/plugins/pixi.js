@@ -83,7 +83,7 @@ function game() {
     arrDogs[i].interactive = true;
   }
 
-  function doggy(x, y, mirror, size, dogNum) {
+  function dogRender(x, y, mirror, size, dogNum) {
     dogNum.anchor.set(0.5);
     dogNum.scale.x = size;
     dogNum.scale.y = dogNum.scale.x;
@@ -98,11 +98,11 @@ function game() {
     });
   }
 
-  doggy(100, 200, 1, 0.8, dog1)
-  doggy(-100, 200, 0, 0.8, dog2)
-  doggy(100, -200, 1, 0.8, dog3)
-  doggy(300, 200, 0, 0.8, dog4)
-  doggy(-310, -200, 0, 0.8, dog5)
+  dogRender(70, 50, 1, 0.8, dog1)
+  dogRender(-100, 100, 0, 0.8, dog2)
+  dogRender(100, -50, 1, 0.8, dog3)
+  dogRender(50, 200, 0, 0.8, dog4)
+  dogRender(-170, -200, 0, 0.8, dog5)
 
   container.addChild(bgFront, dog1, dog2, dog3, dog4, dog5);
   app.stage.addChild(container);
