@@ -98,11 +98,19 @@ function game() {
     });
   }
 
-  dogRender(70, 50, 1, 0.8, dog1)
-  dogRender(-100, 100, 0, 0.8, dog2)
-  dogRender(100, -50, 1, 0.8, dog3)
-  dogRender(50, 200, 0, 0.8, dog4)
-  dogRender(-170, -200, 0, 0.8, dog5)
+  if(window.innerHeight > window.innerWidth) {
+    dogRender(70, 0, 1, 0.8, dog1)
+    dogRender(-100, 100, 0, 0.8, dog2)
+    dogRender(150, -110, 1, 0.8, dog3)
+    dogRender(50, 200, 0, 0.8, dog4)
+    dogRender(-170, -200, 0, 0.8, dog5)
+  } else {
+    dogRender(0, 0, 1, 0.8, dog1)
+    dogRender(-300, 40, 0, 0.8, dog2)
+    dogRender(90, -110, 1, 0.8, dog3)
+    dogRender(250, 100, 0, 0.8, dog4)
+    dogRender(-190, -90, 0, 0.8, dog5)
+  }
 
   container.addChild(bgFront, dog1, dog2, dog3, dog4, dog5);
   app.stage.addChild(container);

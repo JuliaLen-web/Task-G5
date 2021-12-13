@@ -78,6 +78,8 @@ body
   position: relative
   z-index: 3
   text-align: center
+  display: flex
+  flex-direction: column
 
   span
     color: white
@@ -112,10 +114,18 @@ img
   padding: 30px 40px
   background: url(../assets/img/btn.png) no-repeat center/contain
 
+@media screen and (orientation: landscape)
+  .finish
+    &__lady
+      transform: matrix(1, 0, 0, 1, 0, 0)
+      left: -10px
 
-//.bg
-//  position: absolute
-//  z-index: -1
-//  width: 100vw
-//  height: 100vh
-//  background: url(../assets/img/back_five_dogs.jpg) no-repeat center/cover
+    &__img
+      margin-bottom: 0
+
+    .text
+      max-width: 40%
+      margin-bottom: 100px
+
+  .button
+    bottom: 0
